@@ -14,6 +14,11 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireUppercase = false;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
