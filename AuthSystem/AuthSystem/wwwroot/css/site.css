@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Montserrat&family=Ruda&family=Ubuntu&display=swap');
+/*
+font-family: 'Carrois Gothic SC', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Ruda', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
 html {
   font-size: 14px;
 }
@@ -5,6 +12,7 @@ html {
 @media (min-width: 768px) {
   html {
     font-size: 16px;
+    height:100vh;
   }
 }
 
@@ -15,14 +23,18 @@ html {
 html {
   position: relative;
   min-height: 100%;
+  overflow:hidden;
 }
 
 body {
     margin-bottom: 0px;
-    font-family: Roboto,sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+    overflow: hidden;
+    height: 100%;
 }
 
-/*tab navigation*/
+/*Login and Signup Form Start*/
 .login-logout-card .card-header {
     padding: 0px 0px 12px 0px;
 }
@@ -44,4 +56,69 @@ body {
 
 .login-logout-card .card-body {
     padding: 10px 20px;
+    background:transparent;
 }
+.primary {
+    background: #6610f2;
+    color: #fff;
+    height: 70px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+    .primary:hover {
+        background: #3B325C;
+        color:#fff;
+    }
+.card{
+    background:transparent;
+    margin-top: 5vh;
+
+}
+/*Login and Signup Form End*/
+
+/*Wave Animation Start*/
+.ocean {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #015871;
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+    .wave:nth-of-type(2) {
+        top: -175px;
+        animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+        opacity: 1;
+    }
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+    0%, 100% {
+        transform: translate3d(0,-25px,0);
+    }
+
+    50% {
+        transform: translate3d(0,5px,0);
+    }
+}
+/*Wave Animation End*/
