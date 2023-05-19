@@ -19,13 +19,22 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial.cshtml"/>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark"  href="/Identity/Account/Login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Identity/Account/Register">Register</a>
+                        </li>
+                        
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="ocean">
+   @* <div class="ocean">
   <div class="wave"></div>
-  <div class="wave"></div>
+  <div class="wave"></div>*@
 </div>
     <div class="container">
         <main role="main" class="pb-3">

@@ -10,13 +10,13 @@
             <hr />
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
     <div class="row">
-        <div class="col-6">
+        <div class="col-lg-6">
             <div class="form-floating mb-3">
                 <input asp-for="Input.FirstName" class="form-control" autocomplete="firstname" aria-required="true" placeholder="first name" />
                 <label asp-for="Input.FirstName" class="form-label">First Name</label>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6">
             <div class="form-floating mb-3">
                 <input asp-for="Input.LastName" class="form-control" autocomplete="lastname" aria-required="true" placeholder="last name" />
                 <label asp-for="Input.LastName" class="form-label">Last Name</label>
@@ -39,10 +39,6 @@
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg primary mb-3">Register</button>
-
-    <div>
- <a class="nav-link w-100 btn btn-lg secondary" href="/Identity/Account/Login">Login</a>
-    </div>
         </form>
 
 @section Scripts {
